@@ -1,0 +1,57 @@
+chatx-pro/
+├── backend/                         # Backend server (Go + C integration)
+│   ├── api/                         # Route definitions (auth, chat, user)
+│   │   ├── auth.go
+│   │   ├── chat.go
+│   │   └── user.go
+│   ├── controller/                  # Handles requests (login, signup, etc.)
+│   │   ├── auth_controller.go
+│   │   ├── chat_controller.go
+│   │   └── user_controller.go
+│   ├── service/                     # Core business logic
+│   │   ├── auth_service.go
+│   │   ├── chat_service.go
+│   │   └── crypto_service.go        # Communicates with C crypto module
+│   ├── model/                       # Database models (GORM)
+│   │   ├── user.go
+│   │   └── message.go
+│   ├── cmodule/                     # C modules (performance & crypto)
+│   │   ├── secure.c
+│   │   └── secure.h
+│   ├── utils/                       # Utilities (JWT, validation, logging)
+│   │   ├── jwt.go
+│   │   ├── validator.go
+│   │   └── logger.go
+│   ├── main.go                      # App entry point
+│   └── go.mod                       # Go module dependencies
+│
+├── frontend/                        # Frontend (Svelte)
+│   ├── public/                      # Static assets
+│   ├── src/
+│   │   ├── components/              # UI components (ChatBox, ProfileCard, etc.)
+│   │   ├── pages/                   # Page views (Login, Signup, Chat)
+│   │   ├── routes/                  # Client-side routing
+│   │   ├── services/                # API communication logic
+│   │   ├── store/                   # Application state (auth, chat state)
+│   │   └── App.svelte               # App root
+│   ├── package.json                 # NPM dependencies
+│   └── vite.config.js               # Vite build config
+│
+├── database/                        # Database setup and seed data
+│   ├── init.sql                     # Schema definitions (User, Message)
+│   └── seed.sql                     # Sample test data
+│
+├── deploy/                          # Deployment configuration
+│   ├── Dockerfile.backend           # Dockerfile for backend
+│   ├── Dockerfile.frontend          # Dockerfile for frontend
+│   ├── nginx.conf                   # NGINX reverse proxy config
+│   └── docker-compose.yml           # Multi-container deployment
+│
+├── docs/                            # Project documentation
+│   ├── architecture.png             # Architecture diagram
+│   ├── flowchart.drawio             # Flowcharts / sequence diagrams
+│   └── README.md                    # Technical documentation
+│
+├── .env                             # Environment variables
+├── .gitignore                       # Git ignore rules
+└── README.md                        # Main project overview (setup/run)

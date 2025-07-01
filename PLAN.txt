@@ -1,0 +1,75 @@
+🧱 Tech Stack
+|-------------------- Tech Stack -------------------------------|
+| Component        | Language     | Library/Frameworks          |
+|------------------|--------------|-----------------------------|
+| Backend API      | Go           | Gin, Gorilla WebSocket      |
+| Auth             | Go           | JWT, bcrypt (password hash) |
+| Chat Core        | Go + C       | WebSocket + C module (cgo)  |
+| Encryption       | C            | OpenSSL / custom logic      |
+| Database         | PostgreSQL   | GORM ORM                    |
+| Frontend         | JavaScript   | Svelte (or React)           |
+| Real-Time UI     | JavaScript   | Native WebSocket API        |
+| Containerization | Docker       | Dockerfile + Compose        |
+|---------------------------------------------------------------|
+
+🗓️ 7-Day Development Plan
+
+
+✅ Day 1: Project Bootstrap — Backend & Docker Setup
+
+Create Dockerfile and docker-compose.yml
+Set up Go API using Gin framework
+Implement /register and /login endpoints
+Add JWT-based authentication
+Connect to database (PostgreSQL or SQLite)
+Skills Covered: Docker, Go, JWT, REST APIs
+
+
+✅ Day 2: WebSocket Chat System
+
+Integrate WebSocket using Gorilla/WebSocket
+Each user opens a WebSocket connection
+Define message structure: sender, receiver, timestamp
+Use in-memory storage (or Redis, if time permits)
+Skills Covered: Go WebSocket, network communication
+
+
+✅ Day 3: C Module Integration
+Write a simple C module (e.g., encryption, parser, hashing)
+Connect it with Go using cgo
+Use it for tasks like password hashing or performance-sensitive logic
+Skills Covered: C, CGO, hashing, system-level thinking
+
+
+✅ Day 4: Frontend (Svelte/React) Kickoff
+
+Build UI for login/registration
+User profile page
+Connect to WebSocket backend
+Enable real-time chat from frontend
+Skills Covered: Svelte (or React), REST, WebSocket integration
+
+
+✅ Day 5: Complete Chat UI
+
+Send/receive messages
+Create chat window with user context
+Handle JWT securely on frontend
+Skills Covered: Secure frontend auth, messaging interface
+
+
+✅ Day 6: Testing & Full Docker Integration
+
+API testing with Postman or similar
+Full stack Docker Compose: backend, frontend, db (Redis optional)
+Simulate real users chatting
+Skills Covered: Docker Compose, multi-service coordination, testing
+
+
+✅ Day 7: Documentation & Finalization
+
+Write detailed README.md (setup, usage, tech stack)
+Clean up code and add comments
+Push to GitHub with screenshots or demo
+Prepare it for your portfolio
+Skills Covered: Documentation, clean code, portfolio-ready delivery
